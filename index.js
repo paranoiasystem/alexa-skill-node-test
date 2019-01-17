@@ -12,9 +12,7 @@ app_alexa.express({
     debug: true
 });
 
-app.set("view engine", "ejs");
-
-alexaApp.launch(function(request, response) {
+app_alexa.launch(function(request, response) {
   response.say("hai lanciato la prova");
 });
 
@@ -28,4 +26,4 @@ app_alexa.intent("provaIntent", {
 });
 
 app.listen(PORT);
-console.log("Listening on port " + PORT + ", try http://localhost:" + PORT + "/test");
+console.log("Listening on port " + PORT);
