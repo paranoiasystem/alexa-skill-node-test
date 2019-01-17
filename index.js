@@ -1,8 +1,11 @@
 var express = require("express");
 var alexa = require("alexa-app");
+var bodyParser = require("body-parser");
 
 var PORT = process.env.port || 8080;
+
 var app = express();
+app.use(bodyParser.json());
 
 var app_alexa = new alexa.app("ProvaSkill");
 
